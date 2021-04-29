@@ -1,6 +1,9 @@
 # Automatically-TOT
 touch on time での打刻忘れませんか？自動的に打刻してもらいましょう！え？W
 
+## デモ
+![movie](img/demo.mov)
+
 ## 環境構築
 
 shell は Unix で書いてますので windows の場合は変更して解釈してください。
