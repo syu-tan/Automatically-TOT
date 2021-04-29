@@ -1,4 +1,5 @@
 import argparse
+import time
 
 import yaml
 from selenium import webdriver
@@ -60,6 +61,9 @@ class TOTController(object):
         element = self.driver.find_element_by_css_selector(selector)
         element.click()
 
+        # 位置情報や読み込みのため
+        time.sleep(5)
+
     def go_to_work(self):
         # 出勤
         selector = '#record_qmXXCxw9WEWN3X\/YrkMWuQ\=\= > div'
@@ -94,7 +98,7 @@ if __name__=='__main__':
     if args.leave_work:
         totc.leave_work()
         print('お疲れ様でした。')
-        
+
     totc.finish()
     print('==>> done <<==')
 
