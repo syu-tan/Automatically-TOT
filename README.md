@@ -6,6 +6,8 @@ touch on time での打刻忘れませんか？自動的に打刻してもらい
 shell は Unix で書いてますので windows の場合は変更して解釈してください。
 
 - 1. python(Anaconda)
+
+
     [anaconda 公式](https://www.anaconda.com/products/individual#Downloads)で自分の OS を選択してインストール
 
     - ターミナルで `(base)` <- が書かれてあることの確認
@@ -21,6 +23,8 @@ shell は Unix で書いてますので windows の場合は変更して解釈�
 
 
 - 2. Chrome driver のダウンロード
+
+
     [ダウンロードサイト](https://sites.google.com/a/chromium.org/chromedriver/home)で以下を選ぶ
     ![img_0](img/webdriver.jpg)
 
@@ -30,6 +34,8 @@ shell は Unix で書いてますので windows の場合は変更して解釈�
     このレポジトリの `driver/chromedriver` に配置する
 
 - 3. 設定ファイルを作成
+
+
     `config.yaml` に touch on time のログインするユーザーの ID と PASSWORD を記載。
 
     このレポジトリのパスを取得する
@@ -39,6 +45,8 @@ shell は Unix で書いてますので windows の場合は変更して解釈�
     この結果①を使い、`config.yaml` の `chromedriver` : {①}/driver/chromedriver を記載。
 
 - 4. crontab の登録
+
+
     python のパスを取得する
     ```shell
     which python3 ・・・②
@@ -59,6 +67,7 @@ shell は Unix で書いてますので windows の場合は変更して解釈�
     この例では平日(休日考慮してません)の 9時出社、19時退社になります。
 
 ## 実行
+
 実行結果のログは `tot.log` に出力されます。
 
 cron で実行前に確認したい方は
