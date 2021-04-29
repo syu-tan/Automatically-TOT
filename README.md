@@ -1,8 +1,6 @@
 # Automatically-TOT
 touch on time での打刻忘れませんか？自動的に打刻してもらいましょう！え？W
 
-*/3 * * * * /Users/yasuisyusuke/anaconda3/bin/python3 /Users/yasuisyusuke/src/git/Automatically-TOT/main.py -p /Users/yasuisyusuke/src/git/Automatically-TOT/config.yaml >> /Users/yasuisyusuke/src/git/Automatically-TOT/tot.log 2>&1
-
 ## 環境構築
 
 shell は Unix で書いてますので windows の場合は変更して解釈してください。
