@@ -2,7 +2,7 @@
 touch on time での打刻忘れませんか？自動的に打刻してもらいましょう！え？W
 
 ## デモ
-![movie](img/demo.mov)
+`img/demo.mov` に置いてあります。
 
 ## 環境構築
 
