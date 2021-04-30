@@ -1,5 +1,6 @@
 import argparse
 import time
+import random
 
 import yaml
 from selenium import webdriver
@@ -85,12 +86,18 @@ if __name__=='__main__':
     parser.add_argument('-i', '--go_to_work', help='出勤する', action='store_true')
     parser.add_argument('-o', '--leave_work', help='退勤する', action='store_true')
     parser.add_argument('-w', '--watch_screen', help='画面を見る', action='store_true')
+    parser.add_argument('-s', '--skip_random', help='即座に実行する', action='store_true')
     parser.add_argument('-p', '--path_config', help='設定ファイルへのパス', type=str, default='config.yaml')
     args = parser.parse_args()
 
     # 基本処理
     totc = TOTController(args.path_config, args.watch_screen)
     totc.login()
+
+    if not args.skip_random:
+        # 時間をランダムに設定
+        random_minits = random.randrange(59)
+        time.sleep(60 * random_minits)
 
     if args.go_to_work:
         totc.go_to_work()
